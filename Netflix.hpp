@@ -26,4 +26,11 @@ class PredictionCalculator{
         PredictionCalculator();
         //calculate the RMSE
         double rmse() ;
+
+        /*
+        //main driver function, solves program
+        //@param none
+        //@return none
+        */
+        void solve();
 };

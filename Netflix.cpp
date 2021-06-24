@@ -44,6 +44,10 @@ PredictionCalculator::PredictionCalculator()
     }
 }
 
+//solves program, main driver function
+void PredictionCalculator::solve(){
+
+}
 //calculates the RMSE
 double PredictionCalculator::rmse()
 {
