@@ -10,13 +10,14 @@
 #include <cassert>
 
 using namespace std;
+// /u/downing/public_html/git/cs371g-netflix-caches/kevin-wu24-AnswerCache.bin        
 
+// /u/downing/public_html/git/cs371g-netflix-caches/kevin-wu24-AvgMovieRating.bin               
+// /u/downing/public_html/git/cs371g-netflix-caches/kevin-wu24-AvgCustomerRating.bin 
 
 //calculates the RMSE
 double PredictionCalculator::rmse() 
 {
-    preds = {34, 37, 44, 47, 48, 48, 46, 43, 32, 27, 26, 24};
-    scores = {37, 40, 46, 44, 46, 50, 45, 44, 34, 30, 22, 23};
     //ensure that predictions and scores are not empty
     assert(!scores.empty());
     assert(!preds.empty());

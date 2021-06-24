@@ -5,10 +5,18 @@
 using namespace std;
 class PredictionCalculator{
     private:
-        // vector containing scores
-         vector<double> scores;
-        // vector containing predictions
-         vector<double> preds;
+        // stores the average score each customer has provided for the movies they've rated
+        unordered_map <int, double> avgcustomerrating;
+        // stores the average score of the movie ratings
+        unordered_map <int, double> avgmovierating;
+        // stores the actual score provided by the customer
+        unordered_map <int , unordered_map<int, int>> answercache;
+        
+        vector<double> scores;
+
+        vector<double> preds;
+
+        
     public:
         //calculate the RMSE
         double rmse() ;
