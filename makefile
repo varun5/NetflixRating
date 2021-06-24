@@ -10,7 +10,7 @@ DOXYGEN       := doxygen
 ifeq ($(shell uname -s), Darwin)
     BOOST    := /usr/local/include/boost
     CXX      := g++-11
-    CXXFLAGS := --coverage -pedantic -std=c++17 -O3 -I/usr/local/include -Wall -Wextra
+    CXXFLAGS := --coverage -pedantic -std=c++17 -O3 -I/usr/local/include -Wall -Wextra -lboost_serialization
     GCOV     := gcov-11
     GTEST    := /usr/local/include/gtest
     LDFLAGS  := -lgtest -lgtest_main
@@ -19,7 +19,7 @@ ifeq ($(shell uname -s), Darwin)
 else ifeq ($(shell uname -p), unknown)
     BOOST    := /usr/include/boost
     CXX      := g++
-    CXXFLAGS := --coverage -pedantic -std=c++17 -O3 -Wall -Wextra
+    CXXFLAGS := --coverage -pedantic -std=c++17 -O3 -Wall -Wextra -lboost_serialization
     GCOV     := gcov
     GTEST    := /usr/src/gtest
     LDFLAGS  := -lgtest -lgtest_main -pthread
@@ -28,7 +28,7 @@ else ifeq ($(shell uname -p), unknown)
 else
     BOOST    := /usr/include/boost
     CXX      := g++-9
-    CXXFLAGS := --coverage -pedantic -std=c++17 -O3 -Wall -Wextra
+    CXXFLAGS := --coverage -pedantic -std=c++17 -O3 -Wall -Wextra -lboost_serialization
     GCOV     := gcov-9
     GTEST    := /usr/local/include/gtest
     LDFLAGS  := -lgtest -lgtest_main -pthread
