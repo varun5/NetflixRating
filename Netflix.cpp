@@ -8,12 +8,40 @@
 #include <vector>
 #include <unordered_map>
 #include <cassert>
+#include "boost/archive/binary_iarchive.hpp"
+#include "boost/archive/binary_oarchive.hpp"
+#include <boost/serialization/serialization.hpp>
+#include <boost/serialization/unordered_map.hpp>
+#include <boost/serialization/unordered_set.hpp>
+
 
 using namespace std;
 // /u/downing/public_html/git/cs371g-netflix-caches/kevin-wu24-AnswerCache.bin        
 
 // /u/downing/public_html/git/cs371g-netflix-caches/kevin-wu24-AvgMovieRating.bin               
 // /u/downing/public_html/git/cs371g-netflix-caches/kevin-wu24-AvgCustomerRating.bin 
+
+//load Kevin's cache to use
+PredictionCalculator::PredictionCalculator() {
+        //Average customer rating
+        {
+        std::ifstream ifs("/u/downing/public_html/git/cs371g-netflix-caches/kevin-wu24-AvgCustomerRating.bin");
+        boost::archive::binary_iarchive ia(ifs);
+        ia >> avgcustomerrating;
+        }
+        //Average movie rating
+        {
+        std::ifstream ifs("/u/downing/public_html/git/cs371g-netflix-caches/kevin-wu24-AvgMovieRating.bin");
+        boost::archive::binary_iarchive ia(ifs);
+        ia >> avgmovierating;
+        }
+        //Answer Cache
+        {
+        std::ifstream ifs("/u/downing/public_html/git/cs371g-netflix-caches/kevin-wu24-AnswerCache.bin");
+        boost::archive::binary_iarchive ia(ifs);
+        ia >> answercache;
+        }
+}
 
 //calculates the RMSE
 double PredictionCalculator::rmse() 

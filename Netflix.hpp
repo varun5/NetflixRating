@@ -18,6 +18,12 @@ class PredictionCalculator{
 
         
     public:
+        /*
+        //Class constructor
+        //@param none
+        //@return none
+        */
+        PredictionCalculator();
         //calculate the RMSE
         double rmse() ;
 };
