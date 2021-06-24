@@ -10,6 +10,6 @@ class PredictionCalculator{
         // vector containing predictions
         vector<double> preds;
     public:
-
+        //calculate the RMSE
         double rmse() const;
 }
