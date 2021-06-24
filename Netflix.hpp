@@ -6,10 +6,10 @@ using namespace std;
 class PredictionCalculator{
     private:
         // vector containing scores
-        vector<double> scores;
+         vector<double> scores;
         // vector containing predictions
-        vector<double> preds;
+         vector<double> preds;
     public:
         //calculate the RMSE
-        double rmse() const;
-}
+        double rmse() ;
+};
