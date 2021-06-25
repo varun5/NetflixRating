@@ -5,5 +5,6 @@
 int main() {
     using namespace std;
     PredictionCalculator p;
-    cout<<p.rmse()<<endl;
+    //cout<<p.rmse()<<endl;
+    p.solve();
 }

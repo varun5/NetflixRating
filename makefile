@@ -93,6 +93,11 @@ TestNetflix: Netflix.hpp Netflix.cpp TestNetflix.cpp
 	-$(CPPCHECK) Netflix.cpp
 	-$(CPPCHECK) TestNetflix.cpp
 	$(CXX) $(CXXFLAGS) Netflix.cpp TestNetflix.cpp -o TestNetflix $(LDFLAGS)
+#localtest
+run2: RunNetflix
+	./RunNetflix < RunNetflix.in > RunNetflix.tmp
+	-diff RunNetflix.tmp RunNetflix.out
+
 
 # run/test files, compile with make all
 FILES :=                                  \
