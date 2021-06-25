@@ -6,5 +6,6 @@ int main() {
     using namespace std;
     PredictionCalculator p;
     //cout<<p.rmse()<<endl;
-    p.solve();
+    p.calc_average();
+    //p.solve();
 }
