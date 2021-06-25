@@ -5,14 +5,12 @@
 #include <sstream>
 #include <iomanip>
 #include <iterator>
-#include <cmath>
 #include <fstream>
 #include <vector>
 #include <unordered_map>
 #include <cassert>
 #include "boost/archive/binary_iarchive.hpp"
 #include "boost/archive/binary_oarchive.hpp"
-#include <boost/serialization/serialization.hpp>
 #include <boost/serialization/unordered_map.hpp>
 #include <boost/serialization/unordered_set.hpp>
 
@@ -22,9 +20,23 @@ using namespace std;
 // /u/downing/public_html/git/cs371g-netflix-caches/kevin-wu24-AvgMovieRating.bin
 // /u/downing/public_html/git/cs371g-netflix-caches/kevin-wu24-AvgCustomerRating.bin
 
+
+    // stores the average score each customer has provided for the movies they've rated
+        unordered_map <int, double> avgcustomerrating;
+        // stores the average score of the movie ratings
+        unordered_map <int, double> avgmovierating;
+        // stores the actual score provided by the customer
+        unordered_map <int , unordered_map<int, int>> answercache;
+        
+        vector<double> scores;
+
+        vector<double> preds;
+
 //load Kevin's cache to use
+
 PredictionCalculator::PredictionCalculator()
 {
+    
     
     //Average customer rating
     {
@@ -68,7 +80,7 @@ void PredictionCalculator::solve(){
     }
 }
 
-double calc_average(){
+double PredictionCalculator::calc_average(){
     
   
     return avgmovierating.size();
