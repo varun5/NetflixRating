@@ -17,6 +17,8 @@ class PredictionCalculator{
         double rmse() ;
         // calculate average
         double calc_average();
+        // callculates prediction   
+        double prediction(int userid, short movieid);
 
         /*
         //main driver function, solves program
