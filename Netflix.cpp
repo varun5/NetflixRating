@@ -64,26 +64,27 @@ void PredictionCalculator::solve() {
   string input;
   int movieid = -1;
   int userid = -1;
-  //cout<<"A";
+  // read input output;
   while (std::getline(std::cin, input)) {
-    //cout<< "B";
     if (input[input.length() - 1] == ':') {
+      //reads in string input and stores in id
       stringstream ss;
       ss << input;
       ss >> movieid;
      cout << input << endl;
     } else {
+      //reads in string input and stores in id
       stringstream ss;
        ss << input;
       ss >> userid;
+      // prints prediction
       cout << fixed << setprecision(1) << prediction(userid, movieid) << endl;
     }
-    //cout << "C" << endl;
     
   }
   double root = rmse();
+  // prints RMSE
   cout << fixed << setprecision(2) << "RMSE: " << root << "\n";
-  //cout << "D" <<endl;
 }
 
 /*
@@ -102,25 +103,19 @@ double PredictionCalculator::calc_average() {
 
 double PredictionCalculator::prediction(int userid, short movieid){
     const double allavg =  3.22473 * 1.085;
-    //cout << "ALLAVG" <<  allavg << endl;
+    // get the key value for user and movie from maps
     double usercurr = avgcustomerrating.at(userid);
-    //cout << "USERCURR" << usercurr << endl;
     double movcurr = avgmovierating.at(movieid);
-    //cout << "MOVCURR" << movcurr << endl;
     usercurr -= allavg;
     movcurr -= allavg;
     double result = 0;
     result += allavg;
     result += usercurr;
     result += movcurr;
-  
+    // calculate prediction
     double pred = floor((result) * 10)/10;
-    //cout << "PRED" << pred << endl;
     scores.push_back(answercache[movieid][userid]);
     preds.push_back(min(max(pred, 1.0), 5.0));
-    //cout << "PREDS" << min(max(pred, 1.0), 5.0) << endl;
-    //cout << "SCORS" << answercache[movieid][userid] << endl;
-    //cout<<"USERID " << userid << "MOVIEID " << movieid << "PRED " << pred << endl;
     return pred;
 }
 
@@ -128,8 +123,8 @@ double PredictionCalculator::prediction(int userid, short movieid){
 // calculates the RMSE
 double PredictionCalculator::rmse() {
   // ensure that predictions and scores are not empty
-  //assert(!scores.empty());
-  //assert(!preds.empty());
+  assert(!scores.empty());
+  assert(!preds.empty());
   // track sum
   double sum = 0;
   int N = scores.size();
@@ -141,8 +136,7 @@ double PredictionCalculator::rmse() {
   sum /= N;
   double result = std::pow(sum, 0.5);
 
-  //assert(result >= 0);
-  //cout << result;
+  assert(result >= 0);
   return result;
 }
  void PredictionCalculator::rmadd(vector<double> p, vector <double> s ){
