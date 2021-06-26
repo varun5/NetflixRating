@@ -21,7 +21,7 @@ class PredictionCalculator{
         double prediction(int userid, short movieid);
         /*
         //main driver function, solves program
-        //@param none
+        //@param vector p, vector s
         //@return none
         */
         void rmadd(vector<double> p, vector<double> s);

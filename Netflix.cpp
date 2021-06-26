@@ -120,6 +120,7 @@ double PredictionCalculator::prediction(int userid, short movieid){
     preds.push_back(min(max(pred, 1.0), 5.0));
     //cout << "PREDS" << min(max(pred, 1.0), 5.0) << endl;
     //cout << "SCORS" << answercache[movieid][userid] << endl;
+    //cout<<"USERID " << userid << "MOVIEID " << movieid << "PRED " << pred << endl;
     return pred;
 }
 
@@ -141,7 +142,7 @@ double PredictionCalculator::rmse() {
   double result = std::pow(sum, 0.5);
 
   //assert(result >= 0);
-
+  //cout << result;
   return result;
 }
  void PredictionCalculator::rmadd(vector<double> p, vector <double> s ){
