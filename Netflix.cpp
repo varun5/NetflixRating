@@ -144,3 +144,8 @@ double PredictionCalculator::rmse() {
 
   return result;
 }
+ void PredictionCalculator::rmadd(vector<double> p, vector <double> s ){
+   scores = s;
+   preds = p;
+
+ }
