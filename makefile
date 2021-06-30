@@ -142,6 +142,9 @@ Netflix-tests/%: RunNetflix
 # execute run harness against all tests in Netflix test repo and diff with expected output
 run: Netflix-tests RunNetflix
 	-for v in $(T_FILES); do make $${v/.in/}; done
+run2: RunNetflix
+	./RunNetflix < RunNetflix.in > RunNetflix.tmp
+	-diff RunNetflix.tmp RunNetflix.out
 
 # auto format the code
 format:

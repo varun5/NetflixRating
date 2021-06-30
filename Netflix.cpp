@@ -30,21 +30,21 @@ vector<double> preds;
 PredictionCalculator::PredictionCalculator() {
  // Average customer rating
  {
-  std::ifstream ifs("/u/downing/public_html/git/cs371g-netflix-caches/"
+  std::ifstream ifs(
            "kevin-wu24-AvgCustomerRating.bin");
   boost::archive::binary_iarchive ia(ifs);
   ia >> avgcustomerrating;
  }
  // Average movie rating
  {
-  std::ifstream ifs("/u/downing/public_html/git/cs371g-netflix-caches/"
+  std::ifstream ifs(
            "kevin-wu24-AvgMovieRating.bin");
   boost::archive::binary_iarchive ia(ifs);
   ia >> avgmovierating;
  }
  // Answer Cache
  {
-  std::ifstream ifs("/u/downing/public_html/git/cs371g-netflix-caches/"
+  std::ifstream ifs(
            "kevin-wu24-AnswerCache.bin");
   boost::archive::binary_iarchive ia(ifs);
   ia >> answercache;
