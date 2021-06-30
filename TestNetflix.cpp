@@ -26,7 +26,7 @@
 //#include "Netflix.hpp"
 
 using namespace std;
-/*
+
 // ----------------
 // max_cycle_length
 // ----------------
@@ -98,6 +98,7 @@ TEST(NetflixFixture, rmsetest1) {
    ASSERT_EQ(str, "4.082");
 }
 
+/*
 TEST(NetflixFixture, rmsetest2) {
    ss.str("");
    ss.clear();
@@ -194,7 +195,7 @@ ss.clear();
 
 
 
-*/
+
 
 TEST(NetflixFixture, solve) {
    //PredictionCalculator p;
@@ -272,3 +273,4 @@ TEST(NetflixFixture, solve) {
 // TEST(CollatzFixture, max_cycle_length_23) {
 //     ASSERT_EQ(max_cycle_length(3, 3333), 217u);}
 
+*/
