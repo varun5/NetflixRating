@@ -98,7 +98,7 @@ TEST(NetflixFixture, rmsetest1) {
    ASSERT_EQ(str, "4.082");
 }
 
-/*
+
 TEST(NetflixFixture, rmsetest2) {
    ss.str("");
    ss.clear();
@@ -111,6 +111,7 @@ TEST(NetflixFixture, rmsetest2) {
 
    ASSERT_EQ(str, "8.287");
 }
+/*
 TEST(NetflixFixture, rmsetest3) {
    ss.str("");
 ss.clear();
