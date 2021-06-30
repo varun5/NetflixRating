@@ -23,6 +23,8 @@ using namespace std;
 // ----------------
 
 TEST(NetflixFixture, solve) {
+   PredictionCalculator p;
+   ASSERT_EQ(2, 2);
    // ASSERT_EQ(solve(), 20u);}
 }
 // TEST(CollatzFixture, max_cycle_length_1) {
