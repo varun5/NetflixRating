@@ -3,10 +3,10 @@
 #include <vector>
 #include <unordered_map>
 using namespace std;
-class PredictionCalculator{
-  
-    
-  public:
+class PredictionCalculator {
+
+
+public:
     /*
     //Class constructor
     //@param none
@@ -17,7 +17,7 @@ class PredictionCalculator{
     double rmse() ;
     // calculate average
     double calc_average();
-    // callculates prediction 
+    // callculates prediction
     double prediction(int userid, short movieid);
     /*
     //main driver function, solves program
