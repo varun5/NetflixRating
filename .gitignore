@@ -1,0 +1,15 @@
+.DS_Store
+*.gcda
+*.gcno
+*.bin
+*.gcov
+*.plist
+*.tmp
+netflix-tests
+CS371g-Netflix.bbprojectd
+Doxyfile
+Icon?
+latex
+my-makefile
+training/
+.vscode/
