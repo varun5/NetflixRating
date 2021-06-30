@@ -97,9 +97,10 @@ double PredictionCalculator::prediction(int userid, short movieid){
   const double allavg = 3.22473 * 1.085;
   // get the key value for user and movie from maps
   double usercurr = avgcustomerrating.at(userid);
- 
+  cout << "AVGCUSTOMERKEY: " << userid << " AVGCUSTOMERVAL: "<< usercurr << endl;
   double movcurr = avgmovierating.at(movieid);
- 
+  cout << "AVGMOVIEKEY: " << movieid << " AVGMOVIEVAL: "<< movcurr << endl;
+
   usercurr -= allavg;
   movcurr -= allavg;
   double result = 0;
@@ -108,7 +109,8 @@ double PredictionCalculator::prediction(int userid, short movieid){
   result += movcurr;
   // calculate prediction
   double pred = floor((result) * 10)/10;
- 
+  double val = answercache[movieid][userid];
+  cout << "ANSWERCACHEKEYMOVIEID: " << movieid << " ANSWERCACHEKEYUSERID: " << userid << " ANSWERCACHEVAL: " << val << endl; 
   scores.push_back(answercache[movieid][userid]);
   preds.push_back(min(max(pred, 1.0), 5.0));
  
