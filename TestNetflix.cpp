@@ -169,7 +169,7 @@ ss.clear();
    ASSERT_EQ(str, "27.25");
 
 }
-/*
+
 TEST(NetflixFixture, rmsetest8) {
    ss.str("");
 ss.clear();
@@ -199,7 +199,7 @@ ss.clear();
 
    ASSERT_EQ(str, "96.91");
 }
-
+/*
 
 
 
