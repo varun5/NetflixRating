@@ -23,7 +23,7 @@ using namespace std;
 // ----------------
 
 TEST(NetflixFixture, solve) {
-   PredictionCalculator p;
+   //PredictionCalculator p;
    ASSERT_EQ(2, 2);
    // ASSERT_EQ(solve(), 20u);}
 }
