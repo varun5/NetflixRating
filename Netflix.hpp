@@ -19,12 +19,7 @@ class PredictionCalculator{
         double calc_average();
         // callculates prediction   
         double prediction(int userid, short movieid);
-        /*
-        //main driver function, solves program
-        //@param vector p, vector s
-        //@return none
-        */
-        void rmadd(vector<double> p, vector<double> s);
+
         /*
         //main driver function, solves program
         //@param none

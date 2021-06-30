@@ -96,7 +96,7 @@ TestNetflix: Netflix.hpp Netflix.cpp TestNetflix.cpp
 #localtest
 run2: RunNetflix
 	./RunNetflix < RunNetflix.in > RunNetflix.tmp
-	#-diff RunNetflix.tmp RunNetflix.out
+	-diff RunNetflix.tmp RunNetflix.out
 
 
 # run/test files, compile with make all
