@@ -136,7 +136,7 @@ ss.clear();
    ASSERT_EQ(str, "427.7");
 
 }
-/*
+
 TEST(NetflixFixture, rmsetest5) {
    ss.str("");
 ss.clear();
@@ -167,7 +167,10 @@ ss.clear();
    ss << setprecision(4) << rm;
    ss >> str;
    ASSERT_EQ(str, "27.25");
-}TEST(NetflixFixture, rmsetest8) {
+
+}
+/*
+TEST(NetflixFixture, rmsetest8) {
    ss.str("");
 ss.clear();
    pred  = {81 , 342, 36};
