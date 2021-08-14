@@ -1,7 +1,2 @@
-# cs371g-netflix
+Netflix Prize, a best collaborative filtering algorithm to predict user ratings for films
 
-Name: Varun Nayak, Avaneesh Misra
-Gitlab: varunn5, avaneeshmisra01 
-Estimated Completion Time: 20 hours
-Actual Completion Time: 
-Comments: 
